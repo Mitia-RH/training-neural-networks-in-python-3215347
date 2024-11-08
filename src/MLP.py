@@ -23,3 +23,13 @@ class Perceptron:
     def sigmoid(self, x):
         """Evaluate the sigmoid function for the floating point input x."""
         return 1/(1+np.exp(-x))
+
+
+neuron = Perceptron(inputs=2)
+neuron.set_weights([10,10,-15]) # AND
+
+print("And Gate:")
+print(f"0 0 = {round(neuron.run([0,0]), 1)}")
+print(f"0 1 = {round(neuron.run([0,1]), 1)}")
+print(f"1 0 = {round(neuron.run([1,0]), 1)}")
+print(f"1 1 = {round(neuron.run([1,1]), 1)}")
